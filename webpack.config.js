@@ -24,7 +24,7 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'dist'),
     },
-    port: 8081,
+    port: 8080,
     headers: {
       'Feature-Policy': "autoplay 'self'",
       'Access-Control-Allow-Origin': '*',
