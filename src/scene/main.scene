@@ -1,0 +1,56 @@
+<scene>
+  <scenario>
+    <text>とある街の片隅に、小さな喫茶店がある。</text>
+    <sound mode="se" src="./src/resource/se/doorbell.wav" play />
+    <text>木の扉を押し開けると、コーヒーの香りがふわりと広がった。</text>
+    <text>窓際の席に、見知った顔が座っていた。</text>
+    <sound mode="bgm" src="./src/resource/bgm/calm_theme.wav" />
+    <show mode="bg" src="./src/resource/background/counter.png" />
+    <text>友人のユキが手を振っている。</text>
+    <show src="./src/resource/chara/friend.png" name="ユキ" pos="center:bottom" />
+    <say name="ユキ">やっほー、遅かったじゃん！</say>
+    <say name="ユキ">もう注文しちゃおうかと思ってたよ。</say>
+    <show src="./src/resource/chara/master.png" name="マスター" pos="right:bottom" />
+    <text>ユキと、カウンターの向こうにマスターが立っている。</text>
+    <say name="マスター">いらっしゃい</say>
+    <say name="ユキ">何飲む？ おすすめはカフェラテだよ。</say>
+    <choice prompt="何を注文しますか？">
+      <item label="カフェラテを頼む" onSelect="latte">
+        <say name="ユキ">でしょでしょ！ ここのカフェラテ、最高なんだよ。</say>
+      </item>
+      <item label="ブレンドコーヒーにする" onSelect="blend">
+        <say name="ユキ">渋いね〜。大人だなぁ。</say>
+      </item>
+      <item label="紅茶がいいな" onSelect="tea">
+        <say name="ユキ">えっ、喫茶店で紅茶？ まあ、それもアリか。</say>
+      </item>
+      <item label="今は良いよ" onSelect="noThankYou">
+        <say name="ユキ">これを断るなんて、もったいない！</say>
+        <jump index="15" />
+      </item>
+    </choice>
+    <text>注文を終えて、二人はゆったりと話し始めた。</text>
+    <text>しばらくして、注文した飲み物が運ばれてきた。</text>
+    <say name="ユキ">あのさ、最近ちょっと気になってることがあるんだけど。</say>
+    <say name="ユキ">……やっぱ、なんでもない！</say>
+    <text>ユキは照れくさそうに笑った。</text>
+    <choice>
+      <item label="そろそろ帰ろうか" onSelect="goHome">
+        <route to="ending" />
+      </item>
+      <item label="もう少し話そう" onSelect="stayMore">
+        <say name="ユキ">いいね、じゃあもう一杯頼もうよ。</say>
+        <jump index="15" />
+      </item>
+    </choice>
+  </scenario>
+
+  <script>
+    export const sceneConfig = {
+      name: 'main',
+      background: './src/resource/background/cafe-bg.jpg',
+      bgm: './src/resource/bgm/calm_theme.wav',
+      template: './src/screen/game.html'
+    }
+  </script>
+</scene>

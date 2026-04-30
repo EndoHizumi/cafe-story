@@ -1,0 +1,22 @@
+<scene>
+  <scenario>
+    <text>楽しい時間はあっという間に過ぎた。</text>
+    <say name="ユキ">またここで会おうね！</say>
+    <text>ユキは手を振って、夕暮れの街に消えていった。</text>
+    <text>— Fin —</text>
+    <choice>
+      <item label="タイトルに戻る" onSelect="toTitle">
+        <route to="title" />
+      </item>
+    </choice>
+  </scenario>
+
+  <script>
+    export const sceneConfig = {
+      name: 'ending',
+      background: './src/resource/background/sunset.jpg',
+      bgm: './src/resource/bgm/title_theme.mp3',
+      template: './src/screen/game.html'
+    }
+  </script>
+</scene>

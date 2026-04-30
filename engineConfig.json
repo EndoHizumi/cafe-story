@@ -1,0 +1,10 @@
+{
+  "title": "Cafe Story",
+  "description": "はじめてのWebTaleKitゲーム",
+  "resolution": {
+    "width": 1280,
+    "height": 720
+  },
+  "fullScreen": "false",
+  "url": ""
+}

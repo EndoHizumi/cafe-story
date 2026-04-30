@@ -1,0 +1,13 @@
+<scene>
+  <scenario>
+  </scenario>
+
+  <script>
+    export const sceneConfig = {
+      name: 'title',
+      background: './src/resource/background/cafe-bg.jpg',
+      bgm: './src/resource/bgm/title_theme.mp3',
+      template: './src/screen/title.html'
+    }
+  </script>
+</scene>
