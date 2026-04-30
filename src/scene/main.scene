@@ -2,9 +2,10 @@
   <scenario>
     <text>とある街の片隅に、小さな喫茶店がある。</text>
     <sound mode="se" src="./src/resource/se/doorbell.wav" play />
-    <text>木の扉を押し開けると、コーヒーの香りがふわりと広がった。</text>
-    <text>窓際の席に、見知った顔が座っていた。</text>
+    <show mode="bg" src="./src/resource/background/cafe-bg.png" />
     <sound mode="bgm" src="./src/resource/bgm/calm_theme.wav" />
+    <text>木の扉を押し開けると、コーヒーの香りがふわりと広がった。</text>
+    <text>カウンターの席に、見知った顔が座っていた。</text>
     <show mode="bg" src="./src/resource/background/counter.png" />
     <text>友人のユキが手を振っている。</text>
     <show src="./src/resource/chara/friend.png" name="ユキ" pos="center:bottom" />
@@ -48,8 +49,8 @@
   <script>
     export const sceneConfig = {
       name: 'main',
-      background: './src/resource/background/cafe-bg.jpg',
-      bgm: './src/resource/bgm/calm_theme.wav',
+      background: './src/resource/background/town.png',
+      bgm: '',
       template: './src/screen/game.html'
     }
   </script>
