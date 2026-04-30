@@ -1,12 +1,14 @@
 <scene>
   <scenario>
+    <text speed="0.5" wait="true" clear="true">ダミー</text>
+    <jump index="0"></jump>
   </scenario>
 
   <script>
     export const sceneConfig = {
       name: 'title',
-      background: './src/resource/background/cafe-bg.jpg',
-      bgm: './src/resource/bgm/title_theme.mp3',
+      background: './src/resource/background/cafe-bg.png',
+      bgm: '',
       template: './src/screen/title.html'
     }
   </script>
